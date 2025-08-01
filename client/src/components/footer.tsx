@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <p className="text-gray-400 mb-4">DevOps Engineer & Software Developer</p>
           <p className="text-gray-500 text-sm">
-            © 2024 Gideon Adjei. All rights reserved. Built with passion and modern web technologies.
+            © 2025 Gideon Adjei. All rights reserved. Built with passion and modern web technologies.
           </p>
         </motion.div>
       </div>
