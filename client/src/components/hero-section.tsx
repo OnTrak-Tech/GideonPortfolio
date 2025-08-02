@@ -49,9 +49,11 @@ const HeroSection = () => {
               <div className="w-80 h-80 rounded-full bg-gradient-to-r from-primary to-secondary p-2 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-8xl text-gray-400">
-                    <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
+                    <img 
+                          src="/images/newimage.jpeg" 
+                          alt="Gideon Adjei" 
+                          className="w-full h-full object-cover"
+                        />
                   </div>
                 </div>
               </div>
