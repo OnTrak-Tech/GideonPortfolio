@@ -6,8 +6,9 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 const ContactSection = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/api/resume/download';
+    link.href = '/Gideon_Adjei_CV.pdf';
     link.download = 'Gideon_Adjei_CV.pdf';
+    link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -40,12 +41,12 @@ const ContactSection = () => {
   const socialLinks = [
     {
       icon: SiLinkedin,
-      href: "https://www.linkedin.com/in/gideon-adjei-49b353296/",
+      href: "https://linkedin.com/in/gideon-adjei",
       color: "from-primary to-secondary",
     },
     {
       icon: SiGithub,
-      href: "https://github.com/OnTrak-Tech",
+      href: "https://github.com/gideon-adjei",
       color: "from-secondary to-accent",
     },
     {

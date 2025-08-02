@@ -1,6 +1,6 @@
 # Overview
 
-This is a modern portfolio website built with React and Express.js, designed to showcase a DevOps engineer's professional profile. The application features a responsive single-page design with smooth animations, professional styling, and resume download functionality. The site presents comprehensive information about the professional's experience, skills, education, and volunteer work in an elegant, modern interface.
+This is a modern portfolio website built with React and Vite, designed to showcase Gideon Adjei's DevOps and software development expertise. The application is a purely client-side single-page website with responsive design, smooth animations, professional styling, and direct resume download functionality. Perfect for static hosting on platforms like Vercel, Netlify, or GitHub Pages.
 
 # User Preferences
 
@@ -14,15 +14,15 @@ Preferred communication style: Simple, everyday language.
 - **UI Framework**: Radix UI primitives with shadcn/ui components for accessibility and consistent design
 - **Styling**: Tailwind CSS with custom CSS variables for theming and responsive design
 - **Animations**: Framer Motion for smooth page transitions and scroll-triggered animations
-- **State Management**: TanStack Query for server state management and caching
+- **State Management**: Local component state for interactive elements
 - **Build Tool**: Vite for fast development and optimized production builds
 
-## Backend Architecture
-- **Runtime**: Node.js with Express.js framework for REST API endpoints
-- **Language**: TypeScript with ES modules for modern JavaScript features
-- **File Serving**: Custom static file serving for resume downloads with proper headers
-- **Development**: Hot module replacement and development middleware integration
-- **Error Handling**: Centralized error handling middleware with structured responses
+## Static Website Architecture
+- **Build Tool**: Vite for fast development and optimized production builds
+- **Language**: TypeScript for modern JavaScript development
+- **File Serving**: Static file serving with direct PDF access from public folder
+- **Development**: Hot module replacement for fast development cycles
+- **Deployment**: Ready for static hosting platforms (Vercel, Netlify, GitHub Pages)
 
 ## Component Structure
 - **Layout**: Single-page application with sectioned components (Hero, About, Experience, Skills, Education, Contact)
