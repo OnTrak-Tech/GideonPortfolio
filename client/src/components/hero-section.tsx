@@ -16,8 +16,8 @@ const HeroSection = () => {
   const handleDownloadResume = () => {
     // Direct link to resume file
     const link = document.createElement('a');
-    link.href = '/Gideon_Adjei_CV.pdf';
-    link.download = 'Gideon_Adjei_CV.pdf';
+    link.href = '/Gideon_Adjei_CV(1).pdf';
+    link.download = 'Gideon_Adjei_CV(1).pdf';
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();
@@ -29,7 +29,7 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+          src="/devops.jpeg"
           alt="Professional developer workspace"
           className="w-full h-full object-cover opacity-20"
         />
@@ -107,7 +107,7 @@ const HeroSection = () => {
             {/* Social Links */}
             <div className="flex gap-6 justify-center lg:justify-start">
               <a
-                href="https://linkedin.com/in/gideon-adjei"
+                href="https://www.linkedin.com/in/gideon-adjei-49b353296/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary text-2xl transition-colors duration-300"
@@ -115,7 +115,7 @@ const HeroSection = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://github.com/gideon-adjei"
+                href="https://github.com/OnTrak-Tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary text-2xl transition-colors duration-300"

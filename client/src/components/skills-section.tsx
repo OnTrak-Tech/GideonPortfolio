@@ -23,8 +23,8 @@ const SkillsSection = () => {
   ];
 
   const techStack = [
-    "Java", "Spring Boot", "AWS", "Jenkins", "Docker", "Terraform", 
-    "Linux", "Git", "Prometheus", "Grafana"
+    "Java", "Spring Boot", "Python", "PHP", "Bash Scripting", "AWS", "Jenkins", "Docker", "Terraform", 
+    "Linux", "Git", "Prometheus", "Grafana" 
   ];
 
   useEffect(() => {
