@@ -96,7 +96,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
                 onClick={() => scrollToSection("#contact")}
-                className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:scale-105 transition-all duration-300 px-8 py-4 rounded-full text-white font-semibold"
+                className="bg-gradient-to-r from-primary to-secondary bg-white/10 hover:shadow-lg hover:scale-105 transition-all duration-300 px-8 py-4 rounded-full text-white font-semibold"
               >
                 Get In Touch
               </Button>
