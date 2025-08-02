@@ -29,7 +29,7 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/devops.jpeg"
+          src="/images/devops.jpeg"
           alt="Professional developer workspace"
           className="w-full h-full object-cover opacity-20"
         />
