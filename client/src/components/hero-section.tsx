@@ -103,7 +103,7 @@ const HeroSection = () => {
               <Button
                 onClick={handleDownloadResume}
                 variant="outline"
-                className="glass-effect border-white/20 hover:bg-white/20 transition-all duration-300 px-8 py-4 rounded-full text-white font-semibold"
+                className="glass-effect border-white/20 bg-white/10 hover:bg-white/20 transition-all duration-300 px-8 py-4 rounded-full text-white font-semibold"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
