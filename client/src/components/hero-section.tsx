@@ -106,7 +106,7 @@ const HeroSection = () => {
             {/* Social Links */}
             <div className="flex gap-6 justify-center lg:justify-start">
               <a
-                href="https://linkedin.com/in/gideon-adjei"
+                href="https://www.linkedin.com/in/gideon-adjei-49b353296/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary text-2xl transition-colors duration-300"
@@ -114,7 +114,7 @@ const HeroSection = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://github.com/gideon-adjei"
+                href="https://github.com/OnTrak-Tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary text-2xl transition-colors duration-300"
