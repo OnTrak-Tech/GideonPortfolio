@@ -82,15 +82,15 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-300 mb-6 font-light">
-              DevOps Graduate Trainee & Software Developer
+              DevOps Graduate Engineer & Software Developer
             </p>
 
             <p className="text-lg text-gray-400 mb-8 max-w-2xl">
               Disciplined, fast-learning, and hardworking professional with a strong background in Computer Science
               and DevOps Engineering. Known for an elevated level of professionalism, accuracy, and respectful
               communication. Skilled in problem-solving and paying attention to detail, with a proven ability to support
-              operational efficiency in dynamic environments. Seeking a Junior DevOps Engineer role to contribute to
-              the reliability and scalability of infrastructure while supporting the organization's mission.
+              operational efficiency in dynamic environments. Look forward to contribute to the reliability 
+              and scalability of infrastructure while supporting the organization's mission.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
