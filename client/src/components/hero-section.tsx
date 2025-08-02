@@ -31,9 +31,9 @@ const HeroSection = () => {
         <img
           src="/images/devops.jpeg"
           alt="Professional developer workspace"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-800/50 to-slate-900/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-800/60 to-slate-900/70"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
