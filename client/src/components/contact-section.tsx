@@ -154,14 +154,14 @@ const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 asChild
-                className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:scale-105 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold"
+                className="bg-gradient-to-r from-primary to-secondary bg-white/10 hover:shadow-lg hover:scale-105 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold"
               >
                 <a href="mailto:adjeigideon911@gmail.com">Send Email</a>
               </Button>
               <Button
                 onClick={handleDownloadResume}
                 variant="outline"
-                className="glass-effect border-white/20 hover:bg-white/20 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold"
+                className="glass-effect border-white/20 bg-white/10 hover:bg-white/20 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
