@@ -16,8 +16,8 @@ const HeroSection = () => {
   const handleDownloadResume = () => {
     // Direct link to resume file
     const link = document.createElement('a');
-    link.href = '/Gideon_Adjei_CV(1).pdf';
-    link.download = 'Gideon_Adjei_CV(1).pdf';
+    link.href = '/Gideon_Adjei_CV.pdf';
+    link.download = 'Gideon_Adjei_CV.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();
