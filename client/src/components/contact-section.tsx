@@ -77,9 +77,12 @@ const ContactSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img
+            <video
               src="/images/Motion_Graphics_Animation_3840x2160.mp4"
-              alt="Professional developer workspace"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </motion.div>
