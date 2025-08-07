@@ -11,8 +11,6 @@ const ContactSection = () => {
     message: ''
   });
 
-
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const mailtoLink = `mailto:adjeigideon911@gmail.com?subject=Contact from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
@@ -75,7 +73,6 @@ const ContactSection = () => {
               loop
               muted
               playsInline
-
               className="rounded-2xl shadow-2xl w-full h-auto min-h-[400px] object-cover"
             />
           </motion.div>
@@ -86,7 +83,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6 flex flex-col justify-center"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -147,9 +144,9 @@ const ContactSection = () => {
             </form>
 
             {/* Social Links */}
-            <div>
+            <div className="text-center">
               <h4 className="font-semibold text-white mb-4">Connect With Me</h4>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center">
                 {socialLinks.map((social, index) => {
                   const IconComponent = social.icon;
                   return (
@@ -168,7 +165,6 @@ const ContactSection = () => {
                 })}
               </div>
             </div>
-
           </motion.div>
         </div>
       </div>
