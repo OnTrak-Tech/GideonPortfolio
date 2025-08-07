@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { MessageSquare, Puzzle, Clock, RotateCcw } from "lucide-react";
 import { 
-  SiJava, SiSpring, SiPython, SiPhp, SiGnubash, SiAmazonaws, 
+  SiOpenjdk, SiSpring, SiPython, SiPhp, SiGnubash, SiAmazonaws, 
   SiJenkins, SiDocker, SiTerraform, SiLinux, SiGit, 
   SiPrometheus, SiGrafana 
 } from "react-icons/si";
@@ -28,7 +28,7 @@ const SkillsSection = () => {
   ];
 
   const techStack = [
-    { name: "Java", icon: SiJava, color: "#ED8B00" },
+    { name: "Java", icon: SiOpenjdk, color: "#ED8B00" },
     { name: "Spring Boot", icon: SiSpring, color: "#6DB33F" },
     { name: "Python", icon: SiPython, color: "#3776AB" },
     { name: "PHP", icon: SiPhp, color: "#777BB4" },
