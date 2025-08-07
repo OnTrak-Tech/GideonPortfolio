@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Download, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import { useState } from "react";
@@ -11,15 +11,7 @@ const ContactSection = () => {
     message: ''
   });
 
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/Gideon_Adjei_CV.pdf';
-    link.download = 'Gideon_Adjei_CV.pdf';
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -177,15 +169,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Download Resume Button */}
-            <Button
-              onClick={handleDownloadResume}
-              variant="outline"
-              className="w-full glass-effect border-white/20 bg-white/10 hover:bg-white/20 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
-            </Button>
           </motion.div>
         </div>
       </div>
