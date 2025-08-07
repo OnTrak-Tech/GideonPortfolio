@@ -83,7 +83,8 @@ const ContactSection = () => {
               loop
               muted
               playsInline
-              className="rounded-2xl shadow-2xl w-full h-auto"
+
+              className="rounded-2xl shadow-2xl w-full h-auto min-h-[400px] object-cover"
             />
           </motion.div>
 
