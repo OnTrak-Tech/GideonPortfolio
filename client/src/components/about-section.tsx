@@ -25,7 +25,7 @@ const AboutSection = () => {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              src="/images/devops.jpg"
               alt="Modern tech office setup"
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
