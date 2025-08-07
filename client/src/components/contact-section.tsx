@@ -78,7 +78,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              src="/images/Motion_Graphics_Animation_3840x2160.mp4"
               alt="Professional developer workspace"
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
