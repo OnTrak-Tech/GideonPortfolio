@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { MessageSquare, Puzzle, Clock, RotateCcw } from "lucide-react";
 import { 
-  SiOpenjdk, SiSpring, SiPython, SiPhp, SiGnubash, SiAmazonaws, 
+  SiOpenjdk, SiSpring, SiPython, SiPhp, SiGnubash, SiAmazon, 
   SiJenkins, SiDocker, SiTerraform, SiLinux, SiGit, 
   SiPrometheus, SiGrafana 
 } from "react-icons/si";
@@ -33,7 +33,7 @@ const SkillsSection = () => {
     { name: "Python", icon: SiPython, color: "#3776AB" },
     { name: "PHP", icon: SiPhp, color: "#777BB4" },
     { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
-    { name: "AWS", icon: SiAmazonaws, color: "#FF9900" },
+    { name: "AWS", icon: SiAmazon, color: "#FF9900" },
     { name: "Jenkins", icon: SiJenkins, color: "#D33833" },
     { name: "Docker", icon: SiDocker, color: "#2496ED" },
     { name: "Terraform", icon: SiTerraform, color: "#7B42BC" },
