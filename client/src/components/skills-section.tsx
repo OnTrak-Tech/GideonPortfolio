@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { MessageSquare, Puzzle, Clock, RotateCcw } from "lucide-react";
+import { 
+  SiJava, SiSpring, SiPython, SiPhp, SiGnubash, SiAmazonaws, 
+  SiJenkins, SiDocker, SiTerraform, SiLinux, SiGit, 
+  SiPrometheus, SiGrafana 
+} from "react-icons/si";
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,8 +28,19 @@ const SkillsSection = () => {
   ];
 
   const techStack = [
-    "Java", "Spring Boot", "Python", "PHP", "Bash Scripting", "AWS", "Jenkins", "Docker", "Terraform", 
-    "Linux", "Git", "Prometheus", "Grafana" 
+    { name: "Java", icon: SiJava, color: "#ED8B00" },
+    { name: "Spring Boot", icon: SiSpring, color: "#6DB33F" },
+    { name: "Python", icon: SiPython, color: "#3776AB" },
+    { name: "PHP", icon: SiPhp, color: "#777BB4" },
+    { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
+    { name: "AWS", icon: SiAmazonaws, color: "#FF9900" },
+    { name: "Jenkins", icon: SiJenkins, color: "#D33833" },
+    { name: "Docker", icon: SiDocker, color: "#2496ED" },
+    { name: "Terraform", icon: SiTerraform, color: "#7B42BC" },
+    { name: "Linux", icon: SiLinux, color: "#FCC624" },
+    { name: "Git", icon: SiGit, color: "#F05032" },
+    { name: "Prometheus", icon: SiPrometheus, color: "#E6522C" },
+    { name: "Grafana", icon: SiGrafana, color: "#F46800" }
   ];
 
   useEffect(() => {
@@ -121,20 +137,27 @@ const SkillsSection = () => {
             </div>
 
             <h4 className="text-xl font-semibold mb-6 text-center">Tech Stack</h4>
-            <div className="flex flex-wrap gap-3 justify-center">
-              {techStack.map((tech, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.1 }}
-                  className="bg-gradient-to-r from-primary to-secondary px-4 py-2 rounded-full text-sm font-medium cursor-default"
-                >
-                  {tech}
-                </motion.span>
-              ))}
+            <div className="flex flex-wrap gap-4 justify-center">
+              {techStack.map((tech, index) => {
+                const IconComponent = tech.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.1 }}
+                    className="glass-effect p-3 rounded-xl flex flex-col items-center gap-2 hover:bg-white/10 transition-all duration-300 cursor-default"
+                  >
+                    <IconComponent 
+                      className="w-8 h-8" 
+                      style={{ color: tech.color }}
+                    />
+                    <span className="text-xs font-medium text-white">{tech.name}</span>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
