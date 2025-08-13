@@ -16,9 +16,9 @@ const ContactSection = () => {
 
   // EmailJS credentials from environment variables
   const EMAILJS_CONFIG = {
-    serviceId: import.meta.env.EMAILJS_SERVICE_ID,
-    templateId: import.meta.env.EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.EMAILJS_PUBLIC_KEY
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
