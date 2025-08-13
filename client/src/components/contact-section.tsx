@@ -14,11 +14,11 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  // EmailJS credentials from environment variables
+  // Replace these with your EmailJS credentials
   const EMAILJS_CONFIG = {
-    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    serviceId: 'service_1lesq6m',
+    templateId: 'template_t28zjic',
+    publicKey: 'F2hWPGEzqxaatnTaq'
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
