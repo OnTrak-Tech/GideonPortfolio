@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiLinkedin, SiGithub } from "react-icons/si";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -10,11 +11,48 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Replace these with your EmailJS credentials
+  const EMAILJS_CONFIG = {
+    serviceId: 'service_1lesq6m',
+    templateId: 'template_t28zjic',
+    publicKey: 'F2hWPGEzqxaatnTaq'
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:adjeigideon911@gmail.com?subject=Contact from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    window.location.href = mailtoLink;
+    
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setSubmitStatus('error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'adjeigideon911@gmail.com'
+        },
+        EMAILJS_CONFIG.publicKey
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -22,9 +60,10 @@ const ContactSection = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+    if (submitStatus !== 'idle') setSubmitStatus('idle');
   };
 
-  const socialLinks = [
+  const socialLinks = useMemo(() => [
     {
       icon: SiLinkedin,
       href: "https://www.linkedin.com/in/gideon-adjei-49b353296/",
@@ -40,7 +79,7 @@ const ContactSection = () => {
       href: "mailto:adjeigideon911@gmail.com",
       color: "from-accent to-success",
     },
-  ];
+  ], []);
 
   return (
     <section id="contact" className="py-20 bg-slate-800/50">
@@ -136,11 +175,35 @@ const ContactSection = () => {
               
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary to-secondary bg-white/10 hover:shadow-lg hover:scale-105 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-primary to-secondary bg-white/10 hover:shadow-lg hover:scale-105 transition-all duration-300 px-6 py-3 rounded-full text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Send Message
+                  </>
+                )}
               </Button>
+
+              {submitStatus === 'success' && (
+                <div className="flex items-center justify-center text-green-400 text-sm">
+                  <CheckCircle className="w-4 h-4 mr-2" />
+                  Message sent successfully!
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="flex items-center justify-center text-red-400 text-sm">
+                  <AlertCircle className="w-4 h-4 mr-2" />
+                  Failed to send message. Please try again.
+                </div>
+              )}
             </form>
 
             {/* Social Links */}
